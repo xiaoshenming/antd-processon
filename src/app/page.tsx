@@ -1,5 +1,6 @@
 'use client';
-
+// 引入兼容补丁，自动修复 React 19 下的 render API
+import '@ant-design/v5-patch-for-react-19';
 import React, { useState } from 'react';
 import {
     Card,
@@ -129,7 +130,7 @@ export default function ExportFormPage() {
 
             <Modal
                 title="示例链接"
-                visible={modalVisible}
+                open={modalVisible}
                 footer={null}
                 onCancel={() => setModalVisible(false)}
             >
